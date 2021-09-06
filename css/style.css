@@ -80,3 +80,33 @@
     place-self:center center; /*align-self justify self*/
     place-self:center; 
 }
+
+/**
+* Grid areas
+**/
+.container-3{
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:auto;
+    grid-template-areas:
+        "header header header header"
+        "sidebar content content content"
+        "footer footer footer footer"
+    ;
+
+}
+header{
+    background-color: pink;
+    grid-area:header;
+}
+main{
+    background-color: wheat;
+    grid-area:content;
+}
+aside{
+    background-color: lightgreen;
+    grid-area:sidebar;
+}
+footer{
+    background-color: skyblue;
+    grid-area:footer;
+}
