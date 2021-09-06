@@ -56,9 +56,27 @@
     align-items: stretch; /*start | end | center | stretch (default)*/
     justify-items: stretch; /*start | end | center | stretch (default) */
 
-    /*Short-hand for justiy and align*/
+    /*Short-hand for items*/
     place-items:stretch stretch; /*align-items justify items*/
+    place-items:stretch; 
+
+    /*Needs available space to move around*/
+    justify-content:stretch; /*start (default) | end | center | stretch | space-around | space-between | space-evenly;*/
+    align-content:stretch;/*start | end | center | stretch (default) | space-around | space-between | space-evenly; */
+
+    /*Short-hand for content*/
+    place-items:stretch stretch; /*align-contents justify contents*/
+    place-items:stretch; 
 }
 [class*="box"]{
     border:1px solid;
+}
+
+.box5{
+    align-self: center; /*start | end | center | stretch (default)*/
+    justify-self: center; /*start | end | center | stretch (default) */
+
+    /*Short-hand for self*/
+    place-self:center center; /*align-self justify self*/
+    place-self:center; 
 }
