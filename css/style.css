@@ -1,10 +1,16 @@
-.container{
+[class*="container"]{
     height:300px;
     width:600px;
     border:1px solid gray;
     display:grid;
+}
+/**
+* Grids with specific positioning
+**/
+
+.container-1{
     grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
-  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
 }
 
 .item-a {
@@ -31,4 +37,46 @@
     /*Short hand*/
     grid-column:3/span 2; /*start/end*/
     grid-row:third-line/4; /*start/end*/
+}
+
+/**
+* Grids without specific positioning
+**/
+.container-2{
+    grid-template-columns:repeat(3, 1fr); /*1fr 1fr 1fr*/
+    grid-template-rows:auto;
+
+    padding:10px;
+    column-gap:10px; /*creating gaps between columns*/
+    row-gap:10px;   /*creating gaps between rows*/
+    
+    /*Short-hand for gap*/
+    gap:10px 10px; /*<column-gap> <row-gap>*/
+
+    align-items: stretch; /*start | end | center | stretch (default)*/
+    justify-items: stretch; /*start | end | center | stretch (default) */
+
+    /*Short-hand for items*/
+    place-items:stretch stretch; /*align-items justify items*/
+    place-items:stretch; 
+
+    /*Needs available space to move around*/
+    justify-content:stretch; /*start (default) | end | center | stretch | space-around | space-between | space-evenly;*/
+    align-content:stretch;/*start | end | center | stretch (default) | space-around | space-between | space-evenly; */
+
+    /*Short-hand for content*/
+    place-items:stretch stretch; /*align-contents justify contents*/
+    place-items:stretch; 
+}
+[class*="box"]{
+    border:1px solid;
+}
+
+.box5{
+    align-self: center; /*start | end | center | stretch (default)*/
+    justify-self: center; /*start | end | center | stretch (default) */
+
+    /*Short-hand for self*/
+    place-self:center center; /*align-self justify self*/
+    place-self:center; 
 }
