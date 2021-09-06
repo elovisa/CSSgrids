@@ -49,11 +49,15 @@
     padding:10px;
     column-gap:10px; /*creating gaps between columns*/
     row-gap:10px;   /*creating gaps between rows*/
-
+    
     /*Short-hand for gap*/
     gap:10px 10px; /*<column-gap> <row-gap>*/
 
-    
+    align-items: stretch; /*start | end | center | stretch (default)*/
+    justify-items: stretch; /*start | end | center | stretch (default) */
+
+    /*Short-hand for justiy and align*/
+    place-items:stretch stretch; /*align-items justify items*/
 }
 [class*="box"]{
     border:1px solid;
